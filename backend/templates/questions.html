@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='questions.css') }}">
+</head>
+<body>
+    <!-- Title Bar -->
+    <div class="title-bar">
+        <h1>Questions</h1>
+    </div>
+
+    <!-- Flash Message -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="flash-message {{ messages[0][0] }}">
+                {{ messages[0][1] }}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Main Content -->
+    <div class="content">
+        <p>Ask your questions here. Click the + button to ask a new question.</p>
+        <ul class="question-list">
+            {% for question in questions %}
+                <li>{{ question['question'] }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Floating Action Button -->
+    <button class="fab" id="openPopupBtn">+</button>
+
+    <!-- Popup Box for Question Form -->
+    <div class="popup" id="questionPopup">
+        <div class="popup-content">
+            <h2>Ask a Question</h2>
+            <form action="/questions" method="POST">
+                <label for="question">Question:</label>
+                <textarea id="question" name="question" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='questions.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.title-bar {
+    background-color: rgb(56, 116, 120);
+    color: white;
+    display: flex;
+    justify-content: center;  /* Centers the title horizontally */
+    align-items: center;  /* Vertically centers the title */
+    padding: 0.8em 0;  /* Very small vertical padding for a slim title bar */
+    font-size: 1.0em;  /* Reduced font size to make it appear less thick */
+    font-weight: 500;  /* Make the font weight thinner to contribute to a more delicate look */
+    height: 2em;  /* Set a fixed height to ensure it stays thin and controlled */
+}
+
+.settings-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.setting-option {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+select, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    background-color: rgb(98, 149, 132);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(98, 149, 132);
+}
+
+a {
+    color: rgb(22, 121, 171);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

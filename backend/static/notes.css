@@ -1,0 +1,48 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.title-bar {
+    background-color: rgb(56, 116, 120);
+    color: white;
+    display: flex;
+    justify-content: center;  /* Centers the title horizontally */
+    align-items: center;  /* Vertically centers the title */
+    padding: 0.8em 0;  /* Very small vertical padding for a slim title bar */
+    font-size: 1.0em;  /* Reduced font size to make it appear less thick */
+    font-weight: 500;  /* Make the font weight thinner to contribute to a more delicate look */
+    height: 2em;  /* Set a fixed height to ensure it stays thin and controlled */
+}
+.notes-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.notes-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: rgb(36, 54, 66);
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100px;
+    text-align: center;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.notes-box:hover {
+    background-color: rgb(36, 54, 66);
+    color: white;
+    transform: scale(1.05);
+}

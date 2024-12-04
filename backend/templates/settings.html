@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='settings.css') }}">
+</head>
+<body>
+    <!-- Title Bar -->
+    <div class="title-bar">
+        <h1>Settings</h1>
+    </div>
+
+    <!-- Settings Options -->
+    <div class="settings-container">
+        <form action="/update_settings" method="POST">
+            <div class="setting-option">
+                <label for="font-size">Font Size:</label>
+                <select id="font-size" name="font-size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+
+            <div class="setting-option">
+                <label for="theme">Toggle Theme:</label>
+                <select id="theme" name="theme">
+                    <option value="light">Light Mode</option>
+                    <option value="dark">Dark Mode</option>
+                </select>
+            </div>
+
+            <div class="setting-option">
+                <label for="clear-history">Clear History:</label>
+                <button type="button" id="clear-history">Clear</button>
+            </div>
+
+            <div class="setting-option">
+                <a href="/privacy-policy">Privacy Policy</a>
+            </div>
+
+            <div class="setting-option">
+                <a href="/acknowledgements">Acknowledgements</a>
+            </div>
+
+            <div class="setting-option">
+                <a href="/help">Help</a>
+            </div>
+
+            <div class="setting-option">
+                <a href="/about">About</a>
+            </div>
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+</body>
+</html>

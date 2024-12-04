@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='notes.css') }}">
+</head>
+<body>
+    <!-- Title Bar -->
+    <div class="title-bar">
+        <h1>Notes</h1>
+    </div>
+
+    <!-- Notes Content -->
+    <div class="notes-container">
+        <a href="/notes/first-year" class="notes-box">First Year</a>
+        <a href="/notes/second-year" class="notes-box">Second Year</a>
+        <a href="/notes/third-year" class="notes-box">Third Year</a>
+        <a href="/notes/fourth-year" class="notes-box">Fourth Year</a>
+    </div>
+</body>
+</html>

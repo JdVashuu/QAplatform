@@ -1,0 +1,115 @@
+/* Global Styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8; /* Light background color */
+    color: #333; /* Dark gray text for readability */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Title Bar Styling */
+.title-bar {
+    background: linear-gradient(135deg, rgb(56, 116, 120), rgb(56, 116, 120));
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.title-bar h1 {
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Navigation Bar in Title Bar */
+.nav-bar {
+    position: absolute;  /* Position it in the center */
+    left: 50%;
+    transform: translateX(-50%);  /* Center horizontally */
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar ul li {
+    margin-left: 30px;
+}
+
+.nav-bar ul li:first-child {
+    margin-left: 0; /* Remove left margin for the first item */
+}
+
+.nav-bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+    color: #ffd700; /* Gold color on hover */
+}
+
+/* Main Content Area */
+.content {
+    padding: 40px;
+    background-color: #ffffff;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.content h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .title-bar {
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-bar {
+        position: relative;
+        left: 0;
+        transform: none;
+        margin-top: 10px;
+    }
+
+    .nav-bar ul {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .nav-bar ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
