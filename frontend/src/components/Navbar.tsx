@@ -1,10 +1,13 @@
 import { Search, User } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <nav className="bg-gray-800 text-white p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-2xl font-bold">Q&A Platform</div>
+        <Link to="/" className="text-2xl font-bold">
+          Q&A Platform
+        </Link>
         <div className="flex items-center space-x-4">
           <div className="relative">
             <input
@@ -14,10 +17,13 @@ export default function Navbar() {
             />
             <Search className="absolute right-3 top-2.5 text-gray-400" />
           </div>
-          <button className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-full">
+          <Link
+            to="/profile"
+            className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-full"
+          >
             <User className="inline-block mr-2" />
             Account
-          </button>
+          </Link>
         </div>
       </div>
     </nav>
